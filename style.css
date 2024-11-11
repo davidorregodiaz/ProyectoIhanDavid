@@ -1,148 +1,300 @@
-/* ESTILOS GENERALES */
+/* Colores ad8dff(morado),ffe68d(amarillo),A6E68C(verde)*/
+
+/* <--Estilos Generales--> */
 
 :root{
-    --primary-color:#adbbc6;
-    --secondary-color:#8a8fa3;
-    --accent-color:#374254;
-    --status-color:#198754;
-}
-
-html{
     font-size: 16px;
+    font-family: "Roboto",sans-serif;
 }
 
-body,div,h1,h2,h3,h4,ul,li,button{
-    padding: 0;
+body{
+    font-family: "Roboto",sans-serif;
     margin: 0;
+    position: relative;
+    padding: 0;
 }
 
-/* ESTILOS NAVBAR */
+/* Estilos Navbar */
 
 .navbar{
-    position: relative;
-    padding: 15px 0;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
+.navbar i,span,a{
+    /* color: black; */
 }
 
 .navbar-collapse{
-    gap: 30px;
+    justify-content: end;
 }
 
-.navbar-brand{
-    display: none;
-}
-
-.user-section{
-    align-items: end;
-    position: absolute;
-    top: 5px;
-    right: 10px;
-
-}
-
-.username {
-    color: var(--accent-color);
+.nav-item{
     position: relative;
-    cursor: pointer;
+    overflow: hidden;
 }
 
-.user-img{
-    box-shadow: 0 0 4px var(--accent-color);
-}
-
-
-/* Animacion del boton de status del usuario */
-
-
-.username::before{  
+.nav-item::before{
     content: "";
     position: absolute;
-    width: 0;
-    height: 2px;
-    padding: 2px;
-    border-radius: 10px;
-    top: -10px;
-    left: 10px;
-    z-index: -1;
-    box-shadow: 0 0 10px #198754;
-    background-color: var(--status-color);
-    transition: all .3s ease-in-out;
+    width: 70%;
+    height: 3px;
+    background-color: orange;
+    bottom: -10px;
+    left: 20px;
+    transition: all .4s ease-in-out;
 }
 
-.username:hover::before{
-    z-index: 10;
-    top: -6px;
-    width: 80%;
+.nav-item:hover::before{
+    bottom: 0;
 }
 
-/* Prodcuto mas Vendido section */
+.nav-item:hover a{
+    color: white;
+}
 
-.container-wrapper{
-    margin-top: 20px;
+.navbar-nav{
+    gap: 5px;
+}
+.nav-item{
+    color: #ececec;
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    font-weight: 500;
+    /* color: black; */
+}
+
+.icono-mochila{
+    font-size: 30px;   
+}
+
+/* Sobre Nosotros  */
+
+.sobre-nosotros-container{
+    background-color: #efefef;
+    padding: 30px;
+    background-image: url("imagenes/car.jpg");
+    background-repeat: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: static;
+    display: flex;
+    margin-top: -72px;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.presentacion{
+    display: flex;
+    overflow: hidden;
+}
+
+.informacion{
+    color: white;
+    padding-top:20px;
+}
+.informacion-destinos{
+    width: 300px;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+    text-align: end;
+}
+
+
+.informacion-destinos i{
+    color: rgb(200, 113 , 36);
+    font-size: 30px;
+}
+.informacion-destinos span{
+    color: rgb(200, 113 , 36);
+}
+
+.mensaje{
+    font-family: "Bebas Neue", sans-serif;    
+    line-height: 1;
+    font-size:3.4rem;
+    color: white;
+}
+.mensaje span{
+    /* font family me falta */
+    color: rgb(200, 113 , 36);
+}
+
+/* Destinos CARDS */
+
+.destinos-populares{
+    margin: auto;
+    font-family: "Bebas Neuw",sans-serif;
+}
+
+.cards-container{
+    margin: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card{
+    margin: 10px;
+    animation: aparecer 1s linear;
+    animation-timeline: view();
+}
+
+/* @keyframes aparecer {
+    from{
+        opacity: .5;
+    }
+    to{
+        opacity: 1.4;
+    }
+    
+} */
+
+
+
+/* Nuestros Servicios */
+.nuestros-servicios-container{
+    margin: auto;
+    text-align: center;
+}
+
+.titulo-nuestros-servicios{
+    font-family: "Roboto",sans-serif;
+    font-size: 3.2em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.servicio{
+    padding: 10px;
+    position: relative;
+    max-width: 200px;
+}
+
+.img-gastronomica{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px black;
+    transition: all .2s ease-in-out;
+}
+
+.servicio button{
+    margin-top: 5px;
+}
+
+.img-gastronomica:hover{
+    opacity: 0.8;
+    cursor: pointer;
     
 }
 
-.producto-descripcion{
-    display: flex;
+
+.card-body{
     flex-direction: column;
-    justify-content: start;
-    padding-top: 30px;
-    text-wrap: pretty;
 }
 
-.producto-img-container{
-    padding-top: 20px;
-}
-
-.producto-descripcion p+p{
-    margin-top: 10px;
-}
-
-/* Seccion productos */
-
-.next{
-    font-size: 40px;
-    padding-left: 20px;
-    cursor: pointer;
-}
-
-.grid-container-productos{
-    gap: 10px;
-}
-.card{
-    padding: 0;
-}
-
-.card-img-top{
+.btn-primary{
     width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    background-color: var(--bs-btn-bg);
+}
+
+.btn-custom{
+    width: 100%;
+    background-color: rgb(200, 113 , 36);
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
 }
 
 /* Carrusel */
 
 .carousel-item{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: #fff;
+}
+
+.carousel-inner{
+    margin: auto;
 }
 
 .carousel-item img{
-    max-width: 200px;
-    max-height: 200px;
-}
+    max-width: 300px;
+    margin: auto;
 
-.active{
-    z-index: 100;
-}
-.carousel-control-next{
-    z-index: 1000;
 }
 
 
+.testimonios{
+    text-align: center;
+    margin: 30px;
+}
 
-/* RESPONSIVE */
+.testimonios h2{
+    margin: 20px 0;
+}
 
-@media screen and (min-width:768px) {
-    .navbar-brand{
-        display: block;
-    }
+/* Contacto */
+
+
+
+.form-container{
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.form-container h3{
+    margin: 10px 0;
+}
+
+.inputs input{
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    background-color: #efefef;
+    margin: 5px;
+    outline: none;
+}
+
+.inputs label{
+    text-align: start;
+    font-size: 1rem;
+    padding: 1px 5px;
+}
+
+.inputs [type="submit"]{
+    background-color: #48e;
+    margin-top:10px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: .3s all ease-in-out;
+}
+
+.enviar:hover{
+    opacity: .8;
+}
+
+footer{
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 767.98px) {
 }
