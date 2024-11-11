@@ -18,14 +18,31 @@ body,div,h1,h2,h3,h4,ul,li,button{
 
 /* ESTILOS NAVBAR */
 
+.navbar{
+    position: relative;
+    padding: 15px 0;
+}
+
+.navbar-collapse{
+    gap: 30px;
+}
+
 .user-section{
     align-items: end;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
 }
 
 .username {
     color: var(--accent-color);
     position: relative;
     cursor: pointer;
+}
+
+.user-img{
+    box-shadow: 0 0 4px var(--accent-color);
 }
 
 
@@ -49,9 +66,29 @@ body,div,h1,h2,h3,h4,ul,li,button{
 
 .username:hover::before{
     z-index: 10;
-    top: -4px;
+    top: -6px;
     width: 80%;
 }
 
+/* Prodcuto mas Vendido section */
 
+.container-wrapper{
+    margin-top: 20px;
+    
+}
 
+.producto-descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 30px;
+    text-wrap: pretty;
+}
+
+.producto-img-container{
+    padding-top: 20px;
+}
+
+.producto-descripcion p+p{
+    margin-top: 10px;
+}
