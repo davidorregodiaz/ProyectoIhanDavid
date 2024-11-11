@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="signIn_Style.css">
+</head>
+<body>
+<div class="wave_container">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+<main>
+    <div class="principal_container container">
+        <h1 class="title_signIn">Welcome</h1>
+
+        <form class="form_container">
+            <h2 class="sub_title"> SignIn</h2>
+
+            <div class="user_container text_container">
+
+                <label for="user">UserName
+                    <input  id="user" class="user_text text_area" type="text" required>
+                </label>
+
+            </div>
+            <div class="email_container text_container">
+                <a>Email: </a>
+                <label>
+                    <input class="email_text  text_area" type="email"  required>
+                </label>
+            </div>
+
+            <div class="pass_container text_container">
+               <a>Password: </a>
+                <label>
+                    <input class="pass_text text_area" type="password"  required>
+                </label>
+            </div>
+
+            <button class="btn_login"> SignIn</button>
+            <h2 class="signIn_status"></h2>
+
+
+        </form>
+    </div>
+</main>
+
+<script src="signIn_script.js"></script>
+</body>
+</html>
