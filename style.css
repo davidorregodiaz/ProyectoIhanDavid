@@ -27,6 +27,10 @@ body,div,h1,h2,h3,h4,ul,li,button{
     gap: 30px;
 }
 
+.navbar-brand{
+    display: none;
+}
+
 .user-section{
     align-items: end;
     position: absolute;
@@ -91,4 +95,54 @@ body,div,h1,h2,h3,h4,ul,li,button{
 
 .producto-descripcion p+p{
     margin-top: 10px;
+}
+
+/* Seccion productos */
+
+.next{
+    font-size: 40px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.grid-container-productos{
+    gap: 10px;
+}
+.card{
+    padding: 0;
+}
+
+.card-img-top{
+    width: 100%;
+}
+
+/* Carrusel */
+
+.carousel-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.carousel-item img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.active{
+    z-index: 100;
+}
+.carousel-control-next{
+    z-index: 1000;
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (min-width:768px) {
+    .navbar-brand{
+        display: block;
+    }
 }
