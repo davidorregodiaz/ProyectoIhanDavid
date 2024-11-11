@@ -1,15 +1,15 @@
 body{
     margin: auto;
-    font-family: "Fira Code", BlinkMacSystemFont,sans-serif;
+    font-family:"Fira Code", BlinkMacSystemFont,sans-serif;;
     overflow: auto;
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
-    background-color: rgba(0, 0, 0, 0.66);
+    background-color: #374254;;
     width: 100vw;
     height: 100vh;
 }
 .wave{
-    background: linear-gradient(325deg, rgba(39, 101, 182, 0.73) 6% , rgba(20, 160, 211, 0.34) 20%, rgba(28, 209, 182, 0.26) 98%) fixed;
+    background: #ececec;
     border-radius: 1000% 1000% 0 0;
     position: fixed;
     width: 200%;
@@ -30,13 +30,11 @@ body{
     animation: wave 20s -1s linear reverse infinite;
     opacity: 0.9;
 }
-
-.image_container{
-    width: 1000px;
-    height: 600px;
-    background-size: cover;
-
-
+.text{
+    font-weight: 300;
+    font-size: 15px;
+    color: #0e1424;
+    cursor: default;
 }
 .principal_container{
     display: flex;
@@ -44,7 +42,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 500px;
-    height: 450px;
+    height: 500px;
     background-color: #ececec;
     margin: 45px auto auto;
     border-radius: 20px;
@@ -55,7 +53,7 @@ body{
     display: flex;
     box-sizing: content-box;
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-color: #ececec;
     flex-direction: column;
     align-items: center;
@@ -63,7 +61,7 @@ body{
     border-top: 1px solid #ffffff;
     border-bottom: 2px solid #ffffff;
 }
-.title_login{
+.title_signIn{
     font-family:"sans-serif";
     font-size: 40px;
     font-weight:600;
@@ -71,20 +69,20 @@ body{
     color: rgba(19, 23, 23, 0.66);
     text-align:start;
     margin: 5px;
+    cursor: default;
 }
 .sub_title{
     font-family:"sans-serif";
     font-size: 20px;
     font-weight:800;
     color: rgba(19, 23, 23, 0.66);
-    margin-top: 0;
 }
 
 .text_container{
     font-size: 15px;
     font-weight: 600;
     box-sizing:border-box;
-    width:320px;
+    width:300px;
     display:flex;
   flex-direction: column;
     padding:0;
@@ -103,10 +101,9 @@ body{
 
 .btn_login {
     margin: auto;
-    margin-top: 50px;;
     width: 300px;
     height: 40px;
-    background: #482b7a;
+    background: #8a8fa3;
     color :whitesmoke;
     border-radius: 10px;
     padding: 10px;
@@ -119,6 +116,9 @@ body{
 .signIn_status{
     box-sizing: content-box;
     font-size: 15px;
+}
+.signIn_container{
+    margin-top:10px ;
 }
 
 .btn_login:hover {

@@ -84,15 +84,15 @@ font-weight: 300;
     cursor:default;
 }
 
-.info_container{
+.text_container{
     box-sizing:border-box;
-    width:320px;
+    width:300px;
     padding:0;
     margin-bottom: 10px;
     color: #0e1424;
 
 }
-.info_text{
+.text_area{
     color: #0e1424;
     box-sizing: border-box;
     width: 310px;

@@ -3,38 +3,34 @@ const email = document.querySelector(".email_text")
 const  password = document.querySelector(".pass_text")
 const h2 = document.querySelector(".signIn_status")
 const btnSignIn = document.querySelector(".btn_login")
-let userList = JSON.parse(localStorage.getItem("userList")) || [];
-
+const userList = JSON.parse(localStorage.getItem("userList")) || [];
 
 
 btnSignIn.addEventListener("click",(ev)=>{
     console.log(`Iniciando valores actuales : usuario:${username.value}, email:${email.value}, pass:${password.value}`)
-    h2.innerHTML=validate(username,email,password);
     registerNewUser(username.value,email.value,password.value)
     ev.preventDefault()
-    console.log(localStorage.getItem("userList"))
+    console.log("El array ahora tiene ",userList.length)
 })
 
-
-
-
 const registerNewUser= (username,email,password)=>{
-
     let newUser = {
         username : username,
-        email : email,
+        email : email.toLowerCase(),
         password : password
     };
 
-
     exist(username,email,password).then((resultado)=>{
-        if (!resultado) {
+        console.log("Ahora tengo el resultado ",resultado)
 
+        if (!resultado) {
+            console.log("usaurio usado")
             h2.style.color="red"
             h2.innerText="El usuario o email ya estan siendo usados"
         }
 
         else {
+            console.log("Usuario no encontrado porque resuldtadp dice" ,resultado)
             h2.style.color="green"
             userList.push(newUser)
             h2.innerHTML="Se registro correctamente"
@@ -50,7 +46,7 @@ const validate = (username,email,password)=>{
    let emailTemp = email.value.toString();
    let passwordTemp=password.value.toString();
 
-   if (usernameTemp.length<3 && usernameTemp.length>20) return "El nombre de usuario no es valido"
+   if (usernameTemp.trim().length<3 && usernameTemp.trim().length>20 ) return false
    else if ( !emailTemp.includes("@gmail.com")) return "Formato de email no valido"
    else if (  passwordTemp.length<=5) return "La clave debe ser de mas de 5 digitos"
 }
@@ -66,10 +62,10 @@ const getUserList = ()=>{
        },5000)
 
    })
-
 }
 
 const exist =async (username,email,password) =>{
+    console.log("El neuevo usuario tiene valores de ",username ," y  ",email," y ",password)
 
     for (user of await getUserList()) {
 
