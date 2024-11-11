@@ -1,0 +1,57 @@
+/* ESTILOS GENERALES */
+
+:root{
+    --primary-color:#adbbc6;
+    --secondary-color:#8a8fa3;
+    --accent-color:#374254;
+    --status-color:#198754;
+}
+
+html{
+    font-size: 16px;
+}
+
+body,div,h1,h2,h3,h4,ul,li,button{
+    padding: 0;
+    margin: 0;
+}
+
+/* ESTILOS NAVBAR */
+
+.user-section{
+    align-items: end;
+}
+
+.username {
+    color: var(--accent-color);
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* Animacion del boton de status del usuario */
+
+
+.username::before{  
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    padding: 2px;
+    border-radius: 10px;
+    top: -10px;
+    left: 10px;
+    z-index: -1;
+    box-shadow: 0 0 10px #198754;
+    background-color: var(--status-color);
+    transition: all .3s ease-in-out;
+}
+
+.username:hover::before{
+    z-index: 10;
+    top: -4px;
+    width: 80%;
+}
+
+
+
