@@ -12,6 +12,7 @@ body{
     margin: 0;
     position: relative;
     padding: 0;
+    background: #ececec
 }
 
 /* Estilos Navbar */
@@ -79,7 +80,6 @@ body{
     background-color: #efefef;
     padding: 30px;
     background-image: url("imagenes/car.jpg");
-    background-repeat: none;
     background-size: cover;
     background-repeat: no-repeat;
     position: static;
@@ -99,21 +99,26 @@ body{
     padding-top:20px;
 }
 .informacion-destinos{
-    width: 300px;
+    width: 100%;
     padding: 10px;
     font-size: 1.4rem;
     font-weight: 700;
-    position: relative;
-    text-align: end;
+    text-align: center;
 }
 
 
 .informacion-destinos i{
-    color: rgb(200, 113 , 36);
+    color: rgb(175, 42, 32);
     font-size: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
 .informacion-destinos span{
-    color: rgb(200, 113 , 36);
+    text-align: center;
+    color: rgb(175, 42, 32);
 }
 
 .mensaje{
@@ -134,12 +139,13 @@ body{
     font-family: "Bebas Neuw",sans-serif;
 }
 
+
 .cards-container{
     margin: auto;
-    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50px 50px 0 0;
 }
 
 
@@ -147,7 +153,12 @@ body{
 .card{
     margin: 10px;
     animation: aparecer 1s linear;
-    animation-timeline: view();
+    padding: 0;
+    border-radius:20px 20px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.54) 0 0 20px 0;
+}
+.card-img-top{
+    border-radius:20px 20px 0 0;
 }
 
 /* @keyframes aparecer {
@@ -164,15 +175,22 @@ body{
 
 /* Nuestros Servicios */
 .nuestros-servicios-container{
-    margin: auto;
     text-align: center;
+}
+.nuestros-servicios{
+    background:linear-gradient(to bottom,transparent 10%, rgb(236, 151, 76) 45%, rgba(236, 151, 76, 0.63) 80%,transparent 100%);
 }
 
 .titulo-nuestros-servicios{
-    font-family: "Roboto",sans-serif;
-    font-size: 3.2em;
+    font-family:"fantasy";
+    color: #EC974CFF;
+    font-size: 4.2em;
+    font-weight: 700;
     text-align: center;
-    margin-top: 30px;
+
+}
+.row{
+
 }
 
 .servicio{
@@ -208,12 +226,11 @@ body{
     width: 100%;
     text-align: center;
     margin-top: 5px;
-    background-color: var(--bs-btn-bg);
 }
 
 .btn-custom{
     width: 100%;
-    background-color: rgb(200, 113 , 36);
+    background-color: rgb(36, 38, 29);
     text-decoration: none;
     text-align: center;
     padding: 5px;
@@ -295,6 +312,7 @@ footer{
     margin: 0;
     padding: 0;
 }
+
 
 @media (max-width: 767.98px) {
 }
